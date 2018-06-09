@@ -6,27 +6,23 @@
 function numberToString (n) {
     return n.toString();
 }
-var n = 15;
 
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
-function increase (num) {
-    return num + 1;
+function increase (n) {
+    return n + 1;
 }
-var num = 15;
-
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
-function decrease (dnum) {
-    return dnum - 1;
+function decrease (n) {
+    return n - 1;
 }
-var dnum = 15;
 
 
 /**
@@ -35,11 +31,9 @@ var dnum = 15;
  * @param {number} y
  * @return {number} the sum
  */
-function add (adnum, addnum) {
-    return adnum + addnum;
+function add (x, y) {
+    return x + y;
 }
-var adnum = 15;
-var addnum = 12;
 
 /**
  * Subtracts the second number from the first.
@@ -47,11 +41,9 @@ var addnum = 12;
  * @param {number} y
  * @return {number} the difference
  */
-function subtract (subnum, subbnum) {
-    return subnum - subbnum;
+function subtract (x, y) {
+    return x - y;
 }
-var subnum = 15;
-var subbnum = 12;
 
 /**
  * Multiplies two numbers.
@@ -59,11 +51,9 @@ var subbnum = 12;
  * @param {number} y
  * @return {number} the product
  */
-function multiply (multinum, multiinum) {
-    return multinum * multiinum;
+function multiply (x, y) {
+    return x * y;
 }
-var multinum = 15;
-var multiinum = 12;
 
 /**
  * Divides the first number by the second.
@@ -71,21 +61,18 @@ var multiinum = 12;
  * @param {number} y
  * @return {number} the quotient
  */
-function divide (divnum, divvnum) {
-    return divnum / divvnum;
+function divide (x, y) {
+    return x / y;
 }
-var divnum = 15;
-var divvnum = 3;
 
 /**
  * Multiplies a number by itself.
  * @param {number} x, number to be squared
  * @return {number} squared
  */
-function square (squnum){
-    return squnum * squnum;
+function square (x){
+    return x * x;
 }
-var squnum = 11;
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -235,11 +222,24 @@ function isOdd (n) {
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
-function letterGrade (score,total) {
-    if (score >= 90) {
-        var result 
+function letterGrade (score, total) {
+    if (score/total >= 90/100) {
+        return "A";
+    }
+    else if (score/total >= 80/100 && score/total < 90/100) {
+        return "B";
+    }
+    else if (score/total >= 70/100 && score/total < 80/100) {
+        return "C";
+    }
+    else if (score/total >= 60/100 && score/total < 70/100) {
+        return "D";
+    }
+    else if (score/total < 60/100) {
+        return "F";
     }
 }
+
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -248,6 +248,13 @@ function letterGrade (score,total) {
  * @param {object} restaurant   represents a restaurant object
  * @return {object} restaurant
  */
+function incrementReviews (restaurant) {
+    if (restaurant.reviews !== undefined){
+        return ++restaurant.reviews;
+    }
+
+    
+}
 
 
 /**
@@ -256,6 +263,7 @@ function letterGrade (score,total) {
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+
 
 
 /**
