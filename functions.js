@@ -249,11 +249,12 @@ function letterGrade (score, total) {
  * @return {object} restaurant
  */
 function incrementReviews (restaurant) {
-    if (restaurant.reviews !== undefined){
-        return ++restaurant.reviews;
-    }
-
-    
+  if (typeof restaurant.reviews === "number"){
+    restaurant.reviews++
+} else {
+    restaurant.reviews = 1
+}
+return restaurant
 }
 
 
@@ -263,7 +264,9 @@ function incrementReviews (restaurant) {
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
-
+function combine (word1, word2) {
+    return word1 + " " + word2
+}
 
 
 /**
@@ -273,4 +276,8 @@ function incrementReviews (restaurant) {
  * @param {number} radius
  * @return {object} circle
  */
-
+function createCircle (radius) {
+    var rad = radius*radius;
+    var circle = {circumference: 2*Math.PI*radius, area: Math.PI*rad};
+    return circle
+}
